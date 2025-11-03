@@ -1,0 +1,100 @@
+:root{
+  --header:#fbaab7;
+  --bg:#fde9e9;
+  --text:#fb849f;
+  --text-alt:#ffffff;
+  --notif:#ee2f53;
+  --card-shadow: 0 6px 18px rgba(251,132,159,0.12);
+}
+
+*{box-sizing:border-box}
+
+html,body,#__next{height:100%}
+
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.header{
+  background:var(--header);
+  color:var(--text-alt);
+  padding:24px 20px;
+  text-align:center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.page{min-height:100%; display:flex; flex-direction:column}
+
+.container{
+  width:100%;
+  max-width:900px;
+  margin:20px auto;
+  padding:0 20px 60px;
+}
+
+.form{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.form input, .form select{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(251,132,159,0.18);
+  background:rgba(255,255,255,0.9);
+  color:var(--text);
+  min-width:160px;
+}
+
+.primary{
+  background:var(--text);
+  color:var(--text-alt);
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow: var(--card-shadow);
+}
+
+.primary:hover{filter:brightness(0.98)}
+
+.list{display:flex; flex-direction:column; gap:12px}
+
+.card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.6));
+  box-shadow: var(--card-shadow);
+  border:1px solid rgba(251,132,159,0.06);
+}
+
+.card.done{opacity:0.7; text-decoration:line-through}
+.card-left h3{margin:0 0 6px 0; color:var(--text)}
+.card-left .muted{margin:0; color:rgba(251,132,159,0.75)}
+.meta{display:flex; gap:10px; align-items:center; margin-top:8px; font-size:13px; color:rgba(251,132,159,0.9)}
+.badge{padding:4px 8px; border-radius:999px; font-weight:600; text-transform:capitalize}
+.badge.low{background:rgba(239,166,176,0.2); color:var(--text)}
+.badge.medium{background:rgba(251,132,159,0.12); color:var(--text)}
+.badge.high{background:rgba(238,47,83,0.08); color:var(--text)}
+.card-actions{display:flex; gap:8px; align-items:center}
+.card-actions button{padding:8px 10px; border-radius:8px; border:1px solid rgba(251,132,159,0.12); background:transparent; color:var(--text); cursor:pointer}
+.card-actions .danger{border-color:var(--notif); color:var(--notif)}
+.empty{padding:20px; text-align:center; color:rgba(251,132,159,0.7)}
+.center{display:flex; align-items:center; justify-content:center; height:200px; color:var(--text)}
+.notif{position:fixed; right:20px; top:90px; background:var(--notif); color:var(--text-alt); padding:10px 14px; border-radius:8px; box-shadow:0 6px 20px rgba(238,47,83,0.18)}
+
+@media(max-width:600px){
+  .form input, .form select{min-width:120px; flex:1}
+  .card{flex-direction:column; align-items:flex-start; gap:10px}
+  .card-actions{width:100%; justify-content:flex-end}
+}
+
