@@ -19,8 +19,8 @@ Se trabajó utilizando un ambiente de desarrollo con docker, por lo que se neces
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/<TU_USUARIO>/mindora-todo.git
-   cd mindora-todo
+   git clone https://github.com/G2309/PT-Mindora.git
+   cd PT-Mindora.git
    ```
     
     Construye e inicia los contenedores:
