@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Mindora ToDo API",
+    "_postman_id": "b7e01f7e-52e4-4cf3-9f47-5e1d5a68df30",
+    "description": "Colección de endpoints CRUD para la Prueba Técnica Mindora",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:4000/todos", "protocol": "http", "host": ["localhost"], "port": "4000", "path": ["todos"] }
+      }
+    },
+    {
+      "name": "Crear tarea",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Comprar leche\",\n  \"description\": \"Recordar marca entera\",\n  \"dueDate\": \"2025-11-10\",\n  \"priority\": \"medium\"\n}"
+        },
+        "url": { "raw": "http://localhost:4000/todos", "protocol": "http", "host": ["localhost"], "port": "4000", "path": ["todos"] }
+      }
+    },
+    {
+      "name": "Obtener por ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:4000/todos/{{id}}", "protocol": "http", "host": ["localhost"], "port": "4000", "path": ["todos", "{{id}}"] }
+      }
+    },
+    {
+      "name": "Actualizar tarea",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"completed\": true\n}"
+        },
+        "url": { "raw": "http://localhost:4000/todos/{{id}}", "protocol": "http", "host": ["localhost"], "port": "4000", "path": ["todos", "{{id}}"] }
+      }
+    },
+    {
+      "name": "Eliminar tarea",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:4000/todos/{{id}}", "protocol": "http", "host": ["localhost"], "port": "4000", "path": ["todos", "{{id}}"] }
+      }
+    }
+  ]
+}
