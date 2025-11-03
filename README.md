@@ -38,6 +38,7 @@ Luego, abre tu navegador:
 
 🧠 Estructura del proyecto
 
+```
 PT-Mindora/
 ├── backend/          # API Express + Mongoose
 │   ├── src/
@@ -48,6 +49,9 @@ PT-Mindora/
 │   └── Dockerfile
 ├── docker-compose.yml
 └── postman_collection.json
+```
+
+---
 
 📬 API con Postman
 
