@@ -5,6 +5,10 @@ Se incluye backend, frontend y base de datos listos para ejecutar con Docker Com
 
 ---
 
+## Video Demostración/Explicación
+
+[Link al video](https://youtu.be/ixb2jgW98oE)
+
 ## 🧩 Requisitos (dependencias para ejecutar el proyecto)
 
 Se trabajó utilizando un ambiente de desarrollo con docker, por lo que se necesitan:
